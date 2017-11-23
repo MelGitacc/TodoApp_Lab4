@@ -1,6 +1,4 @@
-/**
- * Created by Mel on 21/11/2017.
- */
+package com.example.todoapp;
 import java.util.Date;
 import java.util.UUID;
 

@@ -1,7 +1,7 @@
 /**
  * Created by Mel on 21/11/2017.
  */
-package com.example.todolistapp;
+package com.example.todoapp;
 
 import android.content.Context;
 
@@ -12,7 +12,7 @@ public class TodoModel {
 
     private static TodoModel sTodoModel;
 
-    private ArrayList<Todo> mTodoList;
+    private ArrayList<com.example.todoapp.Todo> mTodoList;
 
     public static TodoModel get(Context context) {
         if (sTodoModel == null) {
@@ -28,7 +28,7 @@ public class TodoModel {
         // simulate some data for testing
 
         for (int i=0; i < 3; i++){
-            Todo todo = new Todo();
+            com.example.todoapp.Todo todo = new com.example.todoapp.Todo();
             todo.setTitle("Todo title " + i);
             todo.setDetail("Detail for task " + todo.getId().toString());
             todo.setComplete(false);
@@ -38,9 +38,9 @@ public class TodoModel {
 
     }
 
-    public Todo getTodo(UUID todoId) {
+    public com.example.todoapp.Todo getTodo(UUID todoId) {
 
-        for (Todo todo : mTodoList) {
+        for (com.example.todoapp.Todo todo : mTodoList) {
             if (todo.getId().equals(todoId)){
                 return todo;
             }
@@ -49,13 +49,13 @@ public class TodoModel {
         return null;
     }
 
-    public ArrayList<Todo> getTodos() {
+    public ArrayList<com.example.todoapp.Todo> getTodos() {
 
         return mTodoList;
 
     }
 
-    public void addTodo(Todo todo){
+    public void addTodo(com.example.todoapp.Todo todo){
 
         mTodoList.add(todo);
 
